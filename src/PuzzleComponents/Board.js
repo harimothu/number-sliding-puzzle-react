@@ -12,16 +12,18 @@ export default class Board extends React.Component {
         columns.push(this.renderSquare(spaceCube, i * level + j));
       }
       puzzle.push(
-        <div key={"boardRow_" + i} className="board-row">
+        <div className="row" key={"boardRow_" + i}>
           {columns}
         </div>
       );
     }
     // return puzzle;
     return (
-        <div className="board">
+     
+        <div className="container">
           {puzzle}
         </div>
+       
     );
   }
 

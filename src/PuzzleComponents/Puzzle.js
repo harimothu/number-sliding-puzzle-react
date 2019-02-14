@@ -28,7 +28,7 @@ class Puzzle extends React.Component {
       randomNos.push(randomI);
       swapCubes(cubes, this.state.level, randomI + 1);
     }
-    if (checkIfWon(cubes)) {
+    if (checkIfWon(cubes, level)) {
       this.onShuffleClick();
     }
     this.setState(
@@ -39,13 +39,18 @@ class Puzzle extends React.Component {
   }
 
   handleClick(i) {
-    if (this.state.cubes[i].number === "") return;
+    //alert("hi");
+    if (this.state.cubes[i].number === this.state.level * this.state.level) return;
     const cubes = this.state.cubes;
     moveCube(cubes, this.state.level, i);
-    if(checkIfWon(cubes))
+    this.setState({
+      cubes: cubes,
+    });
+    if(checkIfWon(cubes, this.state.level))
     {
       alert("You win!");
     }
+    
   }
 
   render() {
@@ -57,15 +62,28 @@ class Puzzle extends React.Component {
         : this.state.width) /
       (level + 1);
     return (
-        <div className="puzzle">
-          <Board
+
+      <div>
+        <div className="container">
+          This is where the top portion goes
+        </div>
+        <div className="container">
+        <Board
             cubes={cubes}
             level={level}
             cubeSize={cubeSize}
             onClick={i => this.handleClick(i)}
           />
-          <button className="newGame" onClick={this.onShuffleClick}>new game</button>
         </div>
+        <div className="container">
+          <div style={{margin: "10px"}}>
+            <button className="col-sm1" onClick={this.onShuffleClick}>new game</button>
+          </div>
+        </div>
+      </div>
+
+          
+          
         
         
     );
@@ -75,7 +93,7 @@ class Puzzle extends React.Component {
 export default Puzzle;
 
 function moveCube(cubes, level, i) {
-  var spaceCubePos = cubes.find(x => x.number === "").position;
+  var spaceCubePos = cubes.find(x => x.number === level * level).position;
   // vertical move
   if (spaceCubePos % level === (i + 1) % level) {
     //move up
@@ -112,9 +130,9 @@ function moveCube(cubes, level, i) {
   }
 }
 
-function checkIfWon(cubes) {
+function checkIfWon(cubes, level) {
   var anyCubesLeft = cubes.find(
-    x => x.position !== x.number && x.number !== ""
+    x => x.position !== x.number && x.number !== level * level
   );
   return !anyCubesLeft ? true : false;
 }
@@ -124,14 +142,14 @@ function initCubes(level) {
   for (let i = 0; i < level * level; i++) {
     cubes.push({
       position: i + 1,
-      number: i === level * level - 1 ? "" : i + 1
+      number: i + 1
     });
   }
   return cubes;
 }
 
 function swapCubes(cubes, level, cubePos) {
-  var spaceCube = cubes.find(x => x.number === "");
+  var spaceCube = cubes.find(x => x.number === level * level);
   if (
     spaceCube.position - level === cubePos ||
     (spaceCube.position - 1 === cubePos && spaceCube.position % level !== 1) ||
