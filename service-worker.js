@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/number-sliding-puzzle-react/precache-manifest.0d28cee7b6babf5b26677937ca701330.js"
+  "/number-sliding-puzzle-react/precache-manifest.217bfba006bbfed6ba2c0778ac472165.js"
 );
 
 workbox.clientsClaim();

@@ -1,13 +1,15 @@
 {
   "main.css": "/number-sliding-puzzle-react/static/css/main.a1c3845f.chunk.css",
-  "main.js": "/number-sliding-puzzle-react/static/js/main.d0567d31.chunk.js",
-  "main.js.map": "/number-sliding-puzzle-react/static/js/main.d0567d31.chunk.js.map",
-  "static/js/1.07140812.chunk.js": "/number-sliding-puzzle-react/static/js/1.07140812.chunk.js",
-  "static/js/1.07140812.chunk.js.map": "/number-sliding-puzzle-react/static/js/1.07140812.chunk.js.map",
+  "main.js": "/number-sliding-puzzle-react/static/js/main.73f8147e.chunk.js",
+  "main.js.map": "/number-sliding-puzzle-react/static/js/main.73f8147e.chunk.js.map",
+  "static/css/1.5c753f68.chunk.css": "/number-sliding-puzzle-react/static/css/1.5c753f68.chunk.css",
+  "static/js/1.10b4bb7e.chunk.js": "/number-sliding-puzzle-react/static/js/1.10b4bb7e.chunk.js",
+  "static/js/1.10b4bb7e.chunk.js.map": "/number-sliding-puzzle-react/static/js/1.10b4bb7e.chunk.js.map",
   "runtime~main.js": "/number-sliding-puzzle-react/static/js/runtime~main.91871345.js",
   "runtime~main.js.map": "/number-sliding-puzzle-react/static/js/runtime~main.91871345.js.map",
+  "static/css/1.5c753f68.chunk.css.map": "/number-sliding-puzzle-react/static/css/1.5c753f68.chunk.css.map",
   "static/css/main.a1c3845f.chunk.css.map": "/number-sliding-puzzle-react/static/css/main.a1c3845f.chunk.css.map",
   "index.html": "/number-sliding-puzzle-react/index.html",
-  "precache-manifest.0d28cee7b6babf5b26677937ca701330.js": "/number-sliding-puzzle-react/precache-manifest.0d28cee7b6babf5b26677937ca701330.js",
+  "precache-manifest.217bfba006bbfed6ba2c0778ac472165.js": "/number-sliding-puzzle-react/precache-manifest.217bfba006bbfed6ba2c0778ac472165.js",
   "service-worker.js": "/number-sliding-puzzle-react/service-worker.js"
 }
