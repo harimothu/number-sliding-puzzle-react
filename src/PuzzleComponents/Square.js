@@ -12,13 +12,13 @@ function Square(props) {
             borderRadius: 4,
             backgroundColor:
               props.cube.number === props.level * props.level
-                ? "white"
+                ? "#faf8ef"
                 : props.cube.number === props.cube.position
                   ? "#9dc9cc"
                   : "#e2d1ae",
             color:
               props.cube.number === props.level * props.level
-                ? "white"
+                ? "#faf8ef"
                 : "black",
           }}
         >
