@@ -61,7 +61,7 @@ class Puzzle extends React.Component {
 
       <div>
         <div className="container">
-          This is where the top portion goes
+          <h3>Can you solve it?</h3>
         </div>
         <div className="container">
           <div className="board">
