@@ -1,5 +1,6 @@
 import React from "react";
 import Board from "./Board";
+import "./Board.css";
 
 class Puzzle extends React.Component {
   constructor(props) {
@@ -13,9 +14,6 @@ class Puzzle extends React.Component {
     this.onShuffleClick = this.onShuffleClick.bind(this)
   }
 
-  // componentDidMount(){
-  //   alert(this.state.level);
-  // }
   onShuffleClick() {
     let level = this.state.level;
     var complexity = level * level * level * level;
@@ -49,7 +47,6 @@ class Puzzle extends React.Component {
     {
       alert("You win!");
     }
-    
   }
 
   render() {
@@ -67,24 +64,21 @@ class Puzzle extends React.Component {
           This is where the top portion goes
         </div>
         <div className="container">
-        <Board
-            cubes={cubes}
-            level={level}
-            cubeSize={cubeSize}
-            onClick={i => this.handleClick(i)}
-          />
+          <div className="board">
+              <Board
+                  cubes={cubes}
+                  level={level}
+                  cubeSize={cubeSize}
+                  onClick={i => this.handleClick(i)}
+                />
+                </div>
         </div>
         <div className="container">
           <div style={{margin: "10px"}}>
-            <button className="col-sm1" onClick={this.onShuffleClick}>new game</button>
+            <button className="col" onClick={this.onShuffleClick}>new game</button>
           </div>
         </div>
-      </div>
-
-          
-          
-        
-        
+      </div>     
     );
   }
 }

@@ -3,7 +3,7 @@ import React from "react";
 function Square(props) {
   return (
         <button onClick={props.onClick}
-        className="col-sm-3"
+        className="col"
         style={{
             fontSize: props.cubeSize / 3,
             fontWeight: "bold",
